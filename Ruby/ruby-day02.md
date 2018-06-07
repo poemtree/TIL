@@ -1,19 +1,12 @@
----
-layout: post
-cover: 'assets/images/tree.jpg'
-title: Ruby Day 02
-tags: Ruby
----
-
-### Ruby
-#### 개요
+## Ruby
+### 개요
 - 루비는 순수 객체 지향 언어이다.
 - 모든것이 객체로 되어있다.
 - Ruby on Rails 프래임 워크 등장으로 유명해졌다
 
-#### Ruby 기초
-##### puts vs print
-```Ruby
+### Ruby 기초
+#### puts vs print
+```ruby
 3.times {print "Hello!"}
 Hello!Hello!Hello! => 3 
 3.times {puts "Hello!"}
@@ -24,8 +17,8 @@ Hello!
 ```
 
 
-##### p vs puts
-```Ruby
+#### p vs puts
+```ruby
 array = [1,2,3]
  => [1, 2, 3] 
 puts array
@@ -47,7 +40,7 @@ p a
 
 ```
 
-##### Naming conventions
+#### Naming conventions
 - 변수
 	- snake_case
 - 상수
@@ -55,14 +48,14 @@ p a
 - 클래스
 	- CamelCase
 
-##### pry
+#### pry
 - install
 	- `gem install pry`
 - excute
 	- `pry`
 
-##### inline statement
-```Ruby
+#### inline statement
+```ruby
 # if문
 a = 0
 b = 1
@@ -87,8 +80,8 @@ hi
 # 0 은 true이다..
 ```
 
-##### case
-```Ruby
+#### case
+```ruby
 name = "young"
 => "young"
 case name
@@ -100,7 +93,7 @@ hi young
 => nil
 ```
 
-##### method
+#### method
 - 대부분의 언어는..
 	- class 밖에 선언되면 funcgion
 - Ruby는..
@@ -145,3 +138,101 @@ divide 1, 0
 divide 1, 1
 => 1
 ```
+
+##### parameter
+- 매게변수
+
+```ruby
+def factorial(n)
+    n < 2 ? n * 1 : n * factorial(m-1)
+end
+factorial # ArgumentError : worng number of arguments (given 0 , expected 1)
+def factorial_d(n=5)
+    n < 2 ? n * 1 : n * factorial(m-1)
+end
+factorial_d # 120
+```
+
+##### block
+- { } 를 일컷는다?
+- | | 는 무엇인고?
+
+```ruby
+3.times do |asdf|
+    puts asdf # Hear is called block
+end
+```
+```ruby
+[2] pry(main)> def hihi
+    return "No block" unless block_given?
+    yield
+end  
+=> :hihi
+hihi
+=> "No block"
+hihi {}
+=> nil
+hihi {"Hello"}
+=> "Hello"
+```
+
+#### String
+- single
+- double
+
+```ruby
+a = "안녕하세요.\n 멋사입니다."
+=> "안녕하세요.\n 멋사입니다."
+b = '안녕하세요. \n 멋사입니다.'
+=> "안녕하세요. \\n 멋사입니다."
+puts a
+안녕하세요.
+ 멋사입니다.
+=> nil
+puts b
+안녕하세요. \n 멋사입니다.
+=> nil
+poemtree:~/workspace $ pry
+c = "PoemTree"
+=> "PoemTree"
+d = "#{c}님 안녕하세요"
+=> "PoemTree님 안녕하세요"
+puts d
+PoemTree님 안녕하세요
+=> nil
+e = '#{c}님 안녕하세요'
+=> "\#{c}님 안녕하세요"
+puts c
+PoemTree
+=> nil
+puts e
+#{c}님 안녕하세요
+=> nil
+```
+
+#### Array
+
+#### Hash
+- key, value 로 구성
+- Array와는 다르게 {}로 생성
+
+```ruby
+hash = Hash.new(0) # 빈 해쉬
+hash1 = {:key1 => value1, :key2 => valuew2, ...}
+hash2 = {key1: value1, key2: valuew2, ...}
+hash3 = {"key1" => value1, "key2" => value2, ...}
+```
+
+##### each
+-  반복하기
+
+```ruby
+hash1.each do |k, v|
+	 puts "#{k} : #{v}"
+ end  
+name : PoemTree
+age : 29
+City : Seoul
+```
+
+@[](https://gist.github.com/nacyot/7624036)
