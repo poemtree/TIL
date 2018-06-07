@@ -1,3 +1,10 @@
+---
+layout: post
+cover: 'assets/images/tree.jpg'
+title: Ruby Day 02
+tags: Ruby
+---
+
 ### Ruby
 #### 개요
 - 루비는 순수 객체 지향 언어이다.
@@ -6,7 +13,7 @@
 
 #### Ruby 기초
 ##### puts vs print
-```[Ruby]
+```Ruby
 3.times {print "Hello!"}
 Hello!Hello!Hello! => 3 
 3.times {puts "Hello!"}
@@ -18,7 +25,7 @@ Hello!
 
 
 ##### p vs puts
-```[Ruby]
+```Ruby
 array = [1,2,3]
  => [1, 2, 3] 
 puts array
@@ -55,7 +62,7 @@ p a
 	- `pry`
 
 ##### inline statement
-```[Ruby]
+```Ruby
 # if문
 a = 0
 b = 1
@@ -81,7 +88,7 @@ hi
 ```
 
 ##### case
-```[Ruby]
+```Ruby
 name = "young"
 => "young"
 case name
@@ -93,3 +100,48 @@ hi young
 => nil
 ```
 
+##### method
+- 대부분의 언어는..
+	- class 밖에 선언되면 funcgion
+- Ruby는..
+	- 모든 함수가 method..
+
+```ruby
+def simple
+  puts "simple!!"
+end  
+=> :simple
+simple
+simple!!
+=> nil
+```
+
+##### return
+```ruby
+# return을 명시한 경우
+def add(a,b)
+  return a+b
+end  
+=> :add
+add 1,2
+=> 3
+
+# return을 생략한 경우
+def add2(a, b)
+  a+b
+end  
+=> :add2
+add2 1,2
+=> 3
+
+# return을 선택적으로 사용해야 할 경우
+def divide(a,b)
+  return "I don't think so" if b == 0
+  a/b
+end  
+=> :divide
+divide 1, 0
+=> "I don't think so"
+divide 1, 1
+=> 1
+```
