@@ -1,16 +1,23 @@
 ### Sinatra day03
 #### Ready to sinatra
 ##### 필수 gem 설치
-` $ gem install sinatra `
-` $ gem install sinatra-contrib `
-` $ gem install sinatra-reloader `
+`$ gem install sinatra`
+
+`$ gem install sinatra-contrib`
+
+`$ gem install sinatra-reloader`
 
 ##### 디렉토리/파일 만들기
-` $ touch app.rb `
-` $ touch index.html `
-` $ mkdir views`
-` $ cd views `
-` $ touch lunch.erb `
+`$ touch app.rb`
+
+`$ touch index.html`
+
+`$ mkdir views`
+
+`$ cd views`
+
+`$ touch lunch.erb`
+
 
 ##### Routing 설정 및 view 설정
 ```ruby
@@ -67,8 +74,10 @@ end
 [Datamapper](http://recipes.sinatrarb.com/p/models/data_mapper)
 
 ##### 필수 gem 설치
-``$ gem install datamapper `
-` $ gem install dm-sqlite-adapter `
+`$ gem install datamapper`
+
+`$ gem install dm-sqlite-adapter`
+
 
 ##### 소스
 ```ruby
