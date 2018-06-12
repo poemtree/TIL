@@ -34,3 +34,4 @@ poemtree:~/workspace (master) $ git add .
 poemtree:~/workspace (master) $ git commit -m "서버 배포"
 poemtree:~/workspace (master) $ git push heroku master
 ```
+4. heroku
