@@ -1,12 +1,16 @@
 # Ruby On Rails
 
 ## 환경 구축 및 설정
+
 ### 준비
+
 #### Virtualbox
+
 [다운로드 링크](https://www.virtualbox.org/wiki/Download_Old_Builds_5_1)
 5.1.30 버전 설치
 
 #### Vagrant
+
 [다운로드 링크](https://releases.hashicorp.com/vagrant/1.9.5/)
 1.9.5 버전 설치 - vagrant_1.9.5.msi
 
@@ -79,7 +83,28 @@
     $ rails -v
 	  Rails 5.2.0
     ```
-
+    
 ##### 참고 사이트
+
 [gorails.com](https://gorails.com)에 접속
 **Guides -> Installing Ruby -> Ubuntu 16.04** 로 이동 및 **Ruby 2.4.4** 선택
+
+## 사용법
+
+- git bash를 통해 접속한다.
+- vagrant에 접속하기 위해서는 vagrant 공유 디렉토리에서 진행해야 한다.
+- vagrant에 접속하여 rails를 실행하기 위해서는 해당 서버의 디렉토리에서 진행해야 한다.
+
+### 명령어
+
+#### git
+
+- `$ vagrant up` : vagrant 실행
+- `$ vagrant halt` : vagrant 종료
+- `$ vagrant ssh` : vagrant 접속
+
+#### vagrant
+
+- `$ cd /vagrant/` : vagrant의 공유 폴더로 이동
+- `$ rails new _app` : _app 서버 생성
+- `$ rails s` : 서버 실행
