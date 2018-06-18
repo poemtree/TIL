@@ -31,11 +31,11 @@
     # 16번째 줄 내용 수정
     config.vm.box = "ubuntu/xenial64"
     
-    # 26번째 줄 주석 삭제 후 guest, host port를 3000으로 수정
+    # 27번째 줄 주석 삭제 후 guest, host port를 3000으로 수정
     config.vm.network "forwarded_port", guest: 3000, host: 3000
 	```
     
-1. ubuntu 설치 및 접속
+1. git bash 위 경로 에서... ubuntu 설치 및 접속
 	```
     $ vagrant up
     $ vagrant ssh
