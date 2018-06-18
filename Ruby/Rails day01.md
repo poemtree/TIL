@@ -92,8 +92,8 @@
 ## 사용법
 
 - git bash를 통해 접속한다.
-- vagrant에 접속하기 위해서는 vagrant 공유 디렉토리에서 진행해야 한다.
-- vagrant에 접속하여 rails를 실행하기 위해서는 해당 서버의 디렉토리에서 진행해야 한다.
+- vagrant에 접속하기 위해서는 Vagrantfile이 있는 디렉토리에서 진행해야 한다.
+- vagrant에 접속하여 rails를 실행하기 위해서는 해당 rails 서버의 디렉토리에서 진행해야 한다.
 
 ### 명령어
 
@@ -103,8 +103,11 @@
 - `$ vagrant halt` : vagrant 종료
 - `$ vagrant ssh` : vagrant 접속
 
-#### vagrant
+#### rails
 
 - `$ cd /vagrant/` : vagrant의 공유 폴더로 이동
-- `$ rails new _app` : _app 서버 생성
-- `$ rails s` : 서버 실행
+- `$ rails new project_name` : 서버(project) 생성
+- `$ rails s` : 서버 실행(`$ rails server` 와 동일)
+- `Ctrl + x` : 서버 종료
+- `$ rails g controller controller_name action1 action2` : 컨트롤러 생성(`$ rails generate` 와 동일)
+- `$ rails d controller controller_name` : 컨트롤러 삭제
